@@ -1,0 +1,16 @@
+{
+	"name": "aabb",
+	"brief_description": "Axis-Aligned Bounding Box",
+	"description": "",
+	"newable": true,
+	"properties": [
+		{"name": "min", "type": "vec3", "default": "vec3(0.0, 0.0, 0.0)", "description": "The min corner of the bounding box" },
+		{"name": "max", "type": "vec3", "default": "vec3(0.0, 0.0, 0.0)", "description": "The max corner of the bounding box" },
+		{"name": "center", "type": "vec3", "default": "vec3(0.0, 0.0, 0.0)", "description": "The max corner of the bounding box" },
+		{"name": "size", "type": "vec3", "default": "vec3(0.0, 0.0, 0.0)", "description": "The distance from max to min. Idiomatically, all vector components are positive.  If a components is negative, use abs() to fix it." },
+	],
+	"methods": [
+		{"name": "contains", "return_type": "bool", "arguments": [{"name": "point", "type": "vec3"}], "description": "Returns true if all the components of the point are inside the AABB"},
+		{"name": "expand", "arguments": [{"name": "point", "type": "vec3"}], "description": "Expands the AABB to include the given point."}
+	]	
+}

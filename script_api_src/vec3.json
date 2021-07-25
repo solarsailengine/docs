@@ -1,0 +1,15 @@
+{
+	"name": "vec3",
+	"brief_description": "3 component vector",
+	"description": "",
+	"newable": true,
+	"properties": [
+		{"name": "x", "type": "float", "default": "0.0", "description": "The x component" },
+		{"name": "y", "type": "float", "default": "0.0", "description": "The y component" },
+		{"name": "z", "type": "float", "default": "0.0", "description": "The z component" }
+	],
+	"methods": [
+		{"name": "contains", "return_type": "bool", "arguments": [{"name": "point", "type": "vec3"}], "description": "Returns true if all the components of the point are inside the AABB"},
+		{"name": "expand", "arguments": [{"name": "point", "type": "vec3"}], "description": "Expands the AABB to include the given point."}
+	]
+}
