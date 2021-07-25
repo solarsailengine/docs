@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Solar Sail Game Engine Documentation'
-copyright = '2020, Darryl T. Agostinelli'
+copyright = '2021, Darryl T. Agostinelli'
 author = 'Darryl T. Agostinelli'
 
 
