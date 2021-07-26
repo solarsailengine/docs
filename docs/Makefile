@@ -31,5 +31,4 @@ serve:
 
 upload:
 	# AWS_PROFILE=solarsail make upload
-	#aws s3 sync _build/html/ s3://docs.solarsailengine.com --acl public-read --delete --cache-control public,max-age=300
-	aws s3 sync _build/html/ s3://docs.solarsailengine.com --acl public-read --delete --cache-control public,max-age=300
+	@aws s3 sync _build/html/ s3://docs.solarsailengine.com --acl public-read --delete --cache-control public,max-age=300
