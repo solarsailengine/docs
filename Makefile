@@ -34,6 +34,7 @@ dist:
 	@touch docs/.nojekyll
 
 serve:
+	@$(MAKE) html
 	@$(venv)/python3 -m http.server --directory _build/html
 
 upload:
