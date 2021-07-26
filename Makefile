@@ -27,7 +27,11 @@ setup:
 	@$(venv)/pip install readthedocs-sphinx-ext
 
 dist:
-	@$(MAKE) html && mv $(BUILDDIR)/html ../docs && touch ../docs/.nojekyll
+	@$(MAKE) html
+	@rm -rf docs
+	@mkdir docs
+	@mv $(BUILDDIR)/html/* docs/
+	@touch docs/.nojekyll
 
 serve:
 	@$(venv)/python3 -m http.server --directory _build/html
