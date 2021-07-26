@@ -7,7 +7,7 @@ venv = venv/bin
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= $(venv)/sphinx-build
-SOURCEDIR     = docs/
+SOURCEDIR     = src/
 BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".
@@ -25,6 +25,9 @@ setup:
 	@$(venv)/pip install sphinx
 	@$(venv)/pip install sphinx-rtd-theme
 	@$(venv)/pip install readthedocs-sphinx-ext
+
+dist:
+	@$(MAKE) html && mv _build/html docs
 
 serve:
 	@$(venv)/python3 -m http.server --directory _build/html
