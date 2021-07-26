@@ -27,7 +27,7 @@ setup:
 	@$(venv)/pip install readthedocs-sphinx-ext
 
 dist:
-	@$(MAKE) html && mv _build/html docs
+	@$(MAKE) html && @mv $(BUILDDIR)/html ../docs
 
 serve:
 	@$(venv)/python3 -m http.server --directory _build/html
