@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Lua Environments &mdash; Solar Sail Game Engine Documentation  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/badge_only.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorials" href="../tutorials/index.html" />
+    <link rel="prev" title="Important Concepts" href="important_concepts.html" /> 
+
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2021-07-26T00:23:55Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "scripting/lua-environments", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Solar Sail Game Engine Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scripting</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="important_concepts.html">Important Concepts</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lua Environments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#engine-environment">Engine Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scene-environment">Scene Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sprite-atlas-environment">Sprite Atlas Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-environment">Default Environment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Solar Sail Game Engine Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Scripting</a> &raquo;</li>
+        
+          <li><a href="important_concepts.html">Important Concepts</a> &raquo;</li>
+        
+      <li>Lua Environments</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/scripting/lua-environments.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lua-environments">
+<h1>Lua Environments<a class="headerlink" href="#lua-environments" title="Permalink to this headline">¶</a></h1>
+<p>A nifty feature of lua is the ability to have more than one environment.  Each environment can have its own set of variables and functions.  Each environment is separate from one another.  There are four kinds of lua environments available in SolarSail. Minimally, every SolarSail program will have an Engine environment.</p>
+<ul class="simple">
+<li><p>Engine</p></li>
+<li><p>Scene</p></li>
+<li><p>Sprite Atlas Loader</p></li>
+<li><p>Default (for lack of a better name)</p></li>
+</ul>
+<div class="section" id="engine-environment">
+<h2>Engine Environment<a class="headerlink" href="#engine-environment" title="Permalink to this headline">¶</a></h2>
+<p>Once any instance of the engine starts, it creates a dedicated lua environment for itself.  All of the contents of the program.lua are executed in this environment.</p>
+<p>From this envrionment, you can interact with the following data types:</p>
+<ul class="simple">
+<li><p>engine</p></li>
+<li><p>display</p></li>
+<li><p>vector2/3/4</p></li>
+<li><p>window</p></li>
+<li><p>viewport</p></li>
+<li><p>camera</p></li>
+<li><p>texture2d</p></li>
+<li><p>aabb</p></li>
+<li><p>system</p></li>
+<li><p>rect</p></li>
+<li><p>transform</p></li>
+<li><p>scene</p></li>
+</ul>
+<p>In addition, the following global function groups are available:</p>
+<ul class="simple">
+<li><p>engine</p></li>
+<li><p>engine.debug</p></li>
+<li><p>engine.displays</p></li>
+<li><p>engine.resources</p></li>
+<li><p>engine.scenes</p></li>
+</ul>
+</div>
+<div class="section" id="scene-environment">
+<h2>Scene Environment<a class="headerlink" href="#scene-environment" title="Permalink to this headline">¶</a></h2>
+<p>Every scene has its own lua environment.  Whatever you code you add to a scene environment will stay local to that scene.  It will not be accessible by any other scene. The scene environment is created when a scene is created.  The scene’s main lua file is executed in this environent.  All script components are also executed in this environment.</p>
+<p>The scene environment contains everything from the Engine environment and the following additional data types:</p>
+<ul class="simple">
+<li><p>spriterenderer</p></li>
+<li><p>rigidbody2d</p></li>
+<li><p>script</p></li>
+<li><p>scripts</p></li>
+<li><p>deferred</p></li>
+<li><p>deferreds</p></li>
+<li><p>animatedsprite</p></li>
+<li><p>staticsprite</p></li>
+<li><p>particlesystem</p></li>
+<li><p>particlesystememitter</p></li>
+<li><p>core</p></li>
+<li><p>audio</p></li>
+</ul>
+<p>In addition, the following global functions are available:</p>
+<ul class="simple">
+<li><p>createentity</p></li>
+<li><p>releaseentity</p></li>
+<li><p>addcomponent</p></li>
+<li><p>getcomponent</p></li>
+<li><p>cloneentity</p></li>
+<li><p>broadcastmessage</p></li>
+<li><p>sendmessage</p></li>
+<li><p>findentitybytag</p></li>
+<li><p>findentitybyname</p></li>
+<li><p>getentitybyname</p></li>
+<li><p>getcurrentscene</p></li>
+<li><p>getcurrententity</p></li>
+</ul>
+</div>
+<div class="section" id="sprite-atlas-environment">
+<h2>Sprite Atlas Environment<a class="headerlink" href="#sprite-atlas-environment" title="Permalink to this headline">¶</a></h2>
+<p>Each time a sprite atlas is loaded, it is done so in a short-lived lua environment that exists only long enough to load the sprite atlas into the engine instance.  During the time it exists, the following the sprite atlas lua environment contains everything from the Engine environment and the following additional data types:</p>
+<ul class="simple">
+<li><p>spriteatlas</p></li>
+<li><p>sprite</p></li>
+<li><p>spritesequence</p></li>
+</ul>
+<p>In addition, the following global functions are available:</p>
+<ul class="simple">
+<li><p>addsprite</p></li>
+<li><p>addsequence</p></li>
+<li><p>addframe</p></li>
+<li><p>getatlas</p></li>
+<li><p>atlas</p></li>
+</ul>
+</div>
+<div class="section" id="default-environment">
+<h2>Default Environment<a class="headerlink" href="#default-environment" title="Permalink to this headline">¶</a></h2>
+<p>SolarSail was built with lua in mind.  It is possible to use the lua executable to create an instance of the engine.</p>
+<p>In this environment only the engine type is available.  The library exposes a single method <cite>create_engine</cite>.</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">solarsail</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;libengine&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">e</span> <span class="o">=</span> <span class="n">solarsail</span><span class="p">.</span><span class="n">create_engine</span><span class="p">()</span>
+<span class="nb">assert</span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="n">init</span><span class="p">())</span>
+<span class="nb">assert</span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="n">automount</span><span class="p">())</span>
+<span class="nb">assert</span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="n">start</span><span class="p">())</span>
+
+<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span> <span class="kr">do</span>
+        <span class="nb">assert</span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="n">pump</span><span class="p">())</span>
+<span class="kr">end</span>
+
+<span class="nb">assert</span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="n">shutdown</span><span class="p">())</span>
+<span class="n">e</span><span class="p">:</span><span class="n">deinit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../tutorials/index.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="important_concepts.html" class="btn btn-neutral float-left" title="Important Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Darryl T. Agostinelli.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
