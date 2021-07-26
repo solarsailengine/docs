@@ -3,4 +3,4 @@ Tutorials
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Tutorials:
