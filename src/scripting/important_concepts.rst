@@ -8,5 +8,3 @@ This section contains information about important concepts related to scripting 
    :caption: Contents:
 
    lua-environments.rst
-
-Test
