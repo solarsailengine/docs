@@ -32,6 +32,7 @@ dist:
 	@mkdir docs
 	@mv $(BUILDDIR)/html/* docs/
 	@touch docs/.nojekyll
+	@echo 'docs.solarsailengine.com' > docs/CNAME
 
 serve:
 	@$(MAKE) html
